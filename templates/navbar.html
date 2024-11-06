@@ -301,7 +301,7 @@
                     <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
                         <nav>
                             <ul>
-                                <li><a class="active" href="{% url 'home' %}" style="padding-left: 448px;">Home</a>
+                                <li><a class="{% if rquest.path == '/' or '/home/' in request.path %}active{% endif %}" href="{% url 'home' %}" style="padding-left: 448px;">Home</a>
                                     <!-- <ul class="sub-menu">
                                         <li><a href="index.html">Home 1</a></li>
                                         <li><a href="index-2.html">Home 2</a></li>
@@ -312,7 +312,7 @@
                                 <li>
                                     <a href="page-about.html">About</a>
                                 </li>
-                                <li><a href="shop-grid-right.html">Shop</a>
+                                <li><a class="{% if '/shop/' in request.path %}active{% endif %}" href="{% url 'shoplist' %}">Shop</a>
                                     <!-- <ul class="sub-menu">
                                         <li><a href="shop-grid-right.html">Shop Grid – Right Sidebar</a></li>
                                         <li><a href="shop-grid-left.html">Shop Grid – Left Sidebar</a></li>
