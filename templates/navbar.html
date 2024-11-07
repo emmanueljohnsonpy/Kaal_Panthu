@@ -310,7 +310,7 @@
                                     </ul> -->
                                 </li>
                                 <li>
-                                    <a href="page-about.html">About</a>
+                                    <a class="{% if '/about/' in request.path %}active{% endif %}" href="{% url 'about_page' %}">About</a>
                                 </li>
                                 <li><a class="{% if '/shop/' in request.path %}active{% endif %}" href="{% url 'shoplist' %}">Shop</a>
                                     <!-- <ul class="sub-menu">
@@ -418,7 +418,7 @@
                                     </ul>
                                 </li> -->
                                 <li>
-                                    <a href="page-contact.html">Contact</a>
+                                    <a class="{% if '/contact/' in request.path %}active{% endif %}" href="{% url 'contact_page' %}">Contact</a>
                                 </li>
                             </ul>
                         </nav>
