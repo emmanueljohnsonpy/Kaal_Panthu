@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'shop',
     'about',
     'contact',
+    'admin_dashboard',
 ]
 
 MIDDLEWARE = [
