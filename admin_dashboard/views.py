@@ -9,3 +9,9 @@ def admin_login_view(request):
 
 def products_view(request):
     return render(request, 'admin_dashboard/page-products-list.html')
+
+def users_view(request):
+    return render(request, 'admin_dashboard/page-sellers-list.html')
+
+def categories_view(request):
+    return render(request, 'admin_dashboard/page-categories.html')
